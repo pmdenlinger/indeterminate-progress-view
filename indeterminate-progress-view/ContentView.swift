@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var progress: Float = 0.3
+    
     var body: some View {
-        Text("Hello, world!")
+        
+        ProgressView(value: progress)
+        
+            .progressViewStyle(LinearProgressViewStyle(tint: .red))
             .padding()
     }
 }
